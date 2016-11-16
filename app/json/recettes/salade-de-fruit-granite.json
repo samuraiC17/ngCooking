@@ -1,0 +1,22 @@
+{
+    "id": "salade-de-fruit-granite",
+    "name": "Salade de fruits au granité citron",
+    "creatorId": 1,
+    "timestamp": 1480356000,
+    "isAvailable": true,
+    "picture": "img/recettes/salade-de-fruit-granite.jpg",
+    "calories": 400,
+    "note": 4,
+    "ingredients": [
+        "pomme",
+        "poire",
+        "fraise",
+        "banane",
+        "kiwi",
+        "glace",
+        "citron-vert",
+        "citron",
+        "sucre"
+    ],
+    "preparation": "<p>Commencez par préparer le granité. Placez le presse-agrumes sur la Kitchen Machine et pressez les citrons. Versez le jus obtenu dans le bol du robot, ajoutez le sucre et mélangez jusqu'à ce que le sucre soit dissout. Incorporez les feuilles de menthe écrasées et l'eau pétillante. Placez au congélateur toute une nuit.</p><p>Le jour J, lavez les fruits rouges. Egrappez les groseilles, dénoyautez les cerises puis coupez ces dernières et les fraises en quatre. Regroupez-les dans un saladier pour les mélanger puis répartissez-les dans des coupes.</p><p>Juste avant d'apporter à table, munissez-vous d'une fourchette et grattez le granité avant de le disposer sur les fruits.</p>"
+}

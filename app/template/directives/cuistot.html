@@ -1,0 +1,12 @@
+<a href="communaute/{{communaute.id}}">
+    <img src="{{communaute.picture}}" alt="{{communaute.firstname}} {{communaute.surname}}">
+    <div class="text">
+        <p class="name">{{communaute.name}}</p>
+        <p class="level">
+            <span class="stars" ng-repeat="starIndex in communaute.stars">
+                    <span class="glyphicon glyphicon-star"></span>
+            </span>
+            <span class="status">{{communaute.status}}</span>
+        </p>
+    </div>
+</a>

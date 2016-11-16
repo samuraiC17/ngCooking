@@ -1,0 +1,16 @@
+{
+		"id": "saumon-echalotte",
+		"name": "Saumon à l'échalotte",
+		"creatorId": 3,
+		"timestamp": 1441065600,
+		"isAvailable": true,
+		"picture": "img/recettes/saumon-echalotte.jpg",
+		"calories": 320,
+		"note": 1,
+		"ingredients": [
+			"saumon",
+			"echalotte",
+			"creme"
+		],
+		"preparation": "<p>Mettre les échalotes avec le beurre dans une poêle. Mettre les pavés de saumon quand les échalotes sont translucides, saler légèrement.</p><p>Quand le saumon est cuit, le réserver dans une assiette. Déglacer les échalotes cuites avec le vinaigre balsamique coupé avec un peu d'eau.</p><p>Ajouter la pointe de moutarde. Faire mijoter 2-3 mn puis ajouter la crème.</p><p>Remettre les pavés de saumon dans la poêle juste avant de servir afin de les rechauffer.</p><p>Miam, Miam... Servir avec du riz ou, pourquoi pas, du chou romanesco!</p>"
+	}

@@ -1,0 +1,38 @@
+<div class="content" id="content_home">
+
+	<h1 class="page-title">Bienvenue sur NgCooking !</h1>
+
+	<section class="section">
+		<h2 class="title">~ Meilleures recettes ~</h2>
+
+		<div class="recettes row">
+			<div class="col-xs-6 col-sm-3 recette" ng-init="initRecette(recette)" ng-repeat="recette in recettes   
+			| orderBy:'-note'
+			| limitTo:4">
+				<recette recette="recette" />
+			</div>
+		</div>
+	</section>
+
+	<section class="section newrecette">
+		<div class="row">
+			<div class="col-xs-12">
+				<p class="c">Vous en avez sous la toque ?!</p>
+				<p class="b">
+					<a href="/recettesAdd" class="btn btn_color1"><span class="glyphicon glyphicon-plus-sign"></span><span>Créez une nouvelle recette</span></a>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2 class="title">~ Nouvelles recettes ~</h2>
+		<div class="recettes row">
+			<div class="col-xs-6 col-sm-3 recette" ng-init="initRecette(recette)" ng-repeat="recette in recettes 
+			| orderBy:'-timestamp'
+			| limitTo:4">
+				<recette recette="recette" />
+			</div>
+		</div>
+	</section>
+</div>

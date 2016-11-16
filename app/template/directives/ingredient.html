@@ -1,0 +1,28 @@
+<div class="ing-wrap">
+    <div class="top">
+        <p class="name">{{ingredient.name}}</p>
+        <p class="category">{{ingredient.category}}</p>
+        <img class="img" src="img/ingredients/{{ingredient.picture}}" alt="Poulet">
+        <div class="calories-wrap">
+            <div class="val">
+                <span>{{ingredient.calories}} kcal</span>
+                <div class="battery">
+                    <!-- pourcentage ci-dessous à moduler en fonction du nombre de calories de l'ingredient sur nombre de calories max -->
+                    <div class="level" style="width: {{100*ingredient.calories/1000}}%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bot">
+        <p class="description">{{ingredient.description}}</p>
+        <div class="list">
+            <p class="list-title">Aliments similaires</p>
+            <ul>
+                <li class="item" ng-repeat="ing in similars">
+                    <img class="item-img" src="img/ingredients/{{ing.picture}}" alt="Boeuf">
+                    <p class="item-name" title="Boeuf">{{ing.name}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

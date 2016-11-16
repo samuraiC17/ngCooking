@@ -1,0 +1,20 @@
+{
+		"id": "cake-jambon-olive",
+		"name": "Cake au jambon et aux olives",
+		"creatorId": 2,
+		"timestamp": 1430438400,
+		"isAvailable": true,
+		"picture": "img/recettes/cake-jambon-olive.jpg",
+		"calories": 330,
+		"note": 3,
+		"ingredients": [
+			"jambon",
+			"oeuf",
+			"farine",
+			"olives",
+			"gruyere",
+			"huile-tournesol",
+			"lait"
+		],
+		"preparation": "<p>Couper les olives en rondelles.</p><p>Couper le jambon en morceaux. Verser les oeufs dans la farine et mélanger.</p><p>Ajouter le lait et l'huile puis mélanger.</p><p>Ajouter le jambon, les olives et le gruyère puis mélanger. Ajouter la levure et, pour ne pas changer, mélanger. :)</p><p>Mettre le tout dans un plat à cake au préalable beurré et placer dans un four chaud à thermostat 6 (180°C) pendant 45 min.</p>"
+	}
