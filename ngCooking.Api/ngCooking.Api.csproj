@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{088F3545-E972-4951-89E2-8FCF8E38E773}</ProjectGuid>
+    <ProjectGuid>{05A358F8-3F1D-430F-96B4-C3387038066D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -180,45 +180,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611161621280_InitialSchema.cs" />
-    <Compile Include="Migrations\201611161621280_InitialSchema.Designer.cs">
-      <DependentUpon>201611161621280_InitialSchema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161633584_FixingInheritance.cs" />
-    <Compile Include="Migrations\201611161633584_FixingInheritance.Designer.cs">
-      <DependentUpon>201611161633584_FixingInheritance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161638059_AddingGuest.cs" />
-    <Compile Include="Migrations\201611161638059_AddingGuest.Designer.cs">
-      <DependentUpon>201611161638059_AddingGuest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161646447_AddingGuest2.cs" />
-    <Compile Include="Migrations\201611161646447_AddingGuest2.Designer.cs">
-      <DependentUpon>201611161646447_AddingGuest2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161649412_removingInheritance.cs" />
-    <Compile Include="Migrations\201611161649412_removingInheritance.Designer.cs">
-      <DependentUpon>201611161649412_removingInheritance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161653277_removingInheritance2.cs" />
-    <Compile Include="Migrations\201611161653277_removingInheritance2.Designer.cs">
-      <DependentUpon>201611161653277_removingInheritance2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161709512_fixingRelationships.cs" />
-    <Compile Include="Migrations\201611161709512_fixingRelationships.Designer.cs">
-      <DependentUpon>201611161709512_fixingRelationships.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161722299_fixingRelationships2.cs" />
-    <Compile Include="Migrations\201611161722299_fixingRelationships2.Designer.cs">
-      <DependentUpon>201611161722299_fixingRelationships2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161724286_fixingRelationships3.cs" />
-    <Compile Include="Migrations\201611161724286_fixingRelationships3.Designer.cs">
-      <DependentUpon>201611161724286_fixingRelationships3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201611161725508_fixingRelationships4.cs" />
-    <Compile Include="Migrations\201611161725508_fixingRelationships4.Designer.cs">
-      <DependentUpon>201611161725508_fixingRelationships4.cs</DependentUpon>
+    <Compile Include="Migrations\201611171620115_InitialSchema.cs" />
+    <Compile Include="Migrations\201611171620115_InitialSchema.Designer.cs">
+      <DependentUpon>201611171620115_InitialSchema.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -289,44 +253,17 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611171620115_InitialSchema.resx">
+      <DependentUpon>201611171620115_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611161621280_InitialSchema.resx">
-      <DependentUpon>201611161621280_InitialSchema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161633584_FixingInheritance.resx">
-      <DependentUpon>201611161633584_FixingInheritance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161638059_AddingGuest.resx">
-      <DependentUpon>201611161638059_AddingGuest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161646447_AddingGuest2.resx">
-      <DependentUpon>201611161646447_AddingGuest2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161649412_removingInheritance.resx">
-      <DependentUpon>201611161649412_removingInheritance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161653277_removingInheritance2.resx">
-      <DependentUpon>201611161653277_removingInheritance2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161709512_fixingRelationships.resx">
-      <DependentUpon>201611161709512_fixingRelationships.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161722299_fixingRelationships2.resx">
-      <DependentUpon>201611161722299_fixingRelationships2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161724286_fixingRelationships3.resx">
-      <DependentUpon>201611161724286_fixingRelationships3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611161725508_fixingRelationships4.resx">
-      <DependentUpon>201611161725508_fixingRelationships4.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -344,9 +281,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50700</DevelopmentServerPort>
+          <DevelopmentServerPort>56710</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50488/</IISUrl>
+          <IISUrl>http://localhost:56710/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
