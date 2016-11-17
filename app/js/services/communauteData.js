@@ -1,5 +1,5 @@
 cookingApp.factory('communauteData', function($resource) {
-    var resource = $resource('/json/communaute.json/:id', { id: '@id' },
+    var resource = $resource('http://localhost:50488/Api/communities/:id', { id: '@id' },
         { "getAll": { method: "GET", isArray: true } });
     return {
         getCommunaute: function(communauteId) {

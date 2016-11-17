@@ -1,5 +1,5 @@
 cookingApp.factory('categoriesData', function($resource) {
-    var resource = $resource('/json/categories.json/:id', { id: '@id' },
+    var resource = $resource('http://localhost:50488/Api/categories/:id', { id: '@id' },
         { "getAll": { method: "GET", isArray: true } });
     return {
         getCategorie: function(categorieId) {
