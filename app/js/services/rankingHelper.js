@@ -18,9 +18,9 @@ cookingApp.factory('rankingHelper', function () {
     }
     function setDescription(level) {
         if (level === 1)
-            return 'Beginner';
+            return 'Novice';
         if (level === 2)
-            return 'Intermediate';
+            return 'Confirmé';
         if (level === 3)
             return 'Expert';
     };

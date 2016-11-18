@@ -1,11 +1,11 @@
-cookingApp.factory('categoriesData', function($resource) {
-    var resource = $resource('http://localhost:50488/Api/categories/:id', { id: '@id' },
+cookingApp.factory('categoriesData', function ($resource,CONFIG) {
+    var resource = $resource(CONFIG['END_POINT'] + 'categories/:id', { id: '@id' },
         { "getAll": { method: "GET", isArray: true } });
     return {
-        getCategorie: function(categorieId) {
+        getCategorie: function (categorieId) {
             return resource.get({ id: categorieId });
         },
-        getAllCategories: function() {
+        getAllCategories: function () {
             return resource.query();
         },
     };

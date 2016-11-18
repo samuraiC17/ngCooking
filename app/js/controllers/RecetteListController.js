@@ -1,7 +1,8 @@
 'use strict';
 
 cookingApp.controller('RecetteListController',
-    function RecetteListController($scope, recetteData, rankingHelper) {
+    function RecetteListController($scope, recetteData, rankingHelper,CONFIG) {
+
         $scope.recettes = recetteData.getAllRecette();
         $scope.showLimit = 4;
         $scope.showMoreClass = 'glyphicon glyphicon-chevron-down';

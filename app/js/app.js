@@ -50,4 +50,6 @@ var cookingApp = angular.module('cookingApp', ['ngSanitize', 'ngResource', 'ngCo
             enabled: true,
             requireBase: false
         });
+    }).constant('CONFIG', {
+        'END_POINT': 'http://localhost:56710/Api/'
     });

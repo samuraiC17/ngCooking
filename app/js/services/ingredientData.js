@@ -1,5 +1,5 @@
-cookingApp.factory('ingredientData', function($resource) {
-    var resource = $resource('http://localhost:50488/Api/ingredients/:id', { id: '@id' },
+cookingApp.factory('ingredientData', function($resource,CONFIG) {
+    var resource = $resource(CONFIG['END_POINT'] + 'ingredients/:id', { id: '@id' },
 { "getAll": { method: "GET", isArray: false } });
     return {
         getIngredient: function(ingredientId) {
