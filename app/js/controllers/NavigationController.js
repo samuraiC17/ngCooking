@@ -13,11 +13,6 @@ cookingApp.controller('NavigationController',
             $location.url('/recette/add');
         };
         $scope.navigationInit = function (source) {
-            // $scope.page_hom = $location.path() === '/home' ? 'page_hom' : 'page_hom active';
-            // $scope.page_rec = $location.path() === '/recettes' ? 'page_rec' : 'page_rec active';
-            // $scope.page_ing = $location.path() === '/ingredients' ? 'page_ing' : 'page_ing active';
-            // $scope.page_com = $location.path() === '/communaute' ? 'page_com' : 'page_com active';
-
             $scope.page_hom = source === 'page_hom' ? 'page_hom' : 'page_hom active';
             $scope.page_rec = source === 'page_rec' ? 'page_rec' : 'page_rec active';
             $scope.page_ing = source === 'page_ing' ? 'page_ing' : 'page_ing active';

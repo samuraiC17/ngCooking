@@ -14,6 +14,10 @@ namespace ngCooking.Api.Models
     {
         [DataMember(Name = "id")]
         public int Id { get; set; }
+
+        [NotMapped]
+        [DataMember(Name = "recipeId")]
+        public string RecipeId { get; set; }
         [DataMember(Name = "userId")]
         public int? UserId { get; set; }
         [DataMember(Name = "userName")]

@@ -53,7 +53,7 @@
 							<div class="filter">
 								<p><label for="">Notez cette recette</label></p>
 								<p>
-									<select name="" id="">
+									<select ng-model="comment.mark" name="" id="">
 															<option value="5">5</option>
 															<option value="4">4</option>
 															<option value="3">3</option>
@@ -64,15 +64,15 @@
 							</div>
 							<div class="filter">
 								<p><label for="">Le titre de votre commentaire</label></p>
-								<p><input type="text" placeholder="ex: Amazingue !" required></p>
+								<p><input ng-model="comment.title" type="text" placeholder="ex: Amazingue !" required></p>
 							</div>
 							<div class="filter">
 								<p><label for="">Votre commentaire</label></p>
-								<textarea name="" id="" class="wide" placeholder="ex: Franchement cette NgRecette, c’est de la bombe. Le genre de saveurs qui t’éveillent les papilles, t’as vu ! Woula, j’ai kiffé"
+								<textarea ng-model="comment.comment" name="" id="" class="wide" placeholder="ex: Franchement cette NgRecette, c’est de la bombe. Le genre de saveurs qui t’éveillent les papilles, t’as vu ! Woula, j’ai kiffé"
 									required></textarea>
 							</div>
 							<div class="ar">
-								<input type="submit" class="btn btn_color1" value="Poster !">
+								<input class="btn btn_color1" value="Poster !" ng-click="postComment(comment)">
 							</div>
 						</form>
 					</div>

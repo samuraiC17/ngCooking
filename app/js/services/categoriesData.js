@@ -1,12 +1,18 @@
-cookingApp.factory('categoriesData', function ($resource,CONFIG) {
-    var resource = $resource(CONFIG['END_POINT'] + 'categories/:id', { id: '@id' },
+cookingApp.factory('commentsData', function ($resource, CONFIG) {
+    var resource = $resource(CONFIG['END_POINT'] + 'comments/:id', { id: '@id' },
         { "getAll": { method: "GET", isArray: true } });
+        
     return {
-        getCategorie: function (categorieId) {
-            return resource.get({ id: categorieId });
+        getComment: function (commentId) {
+            return resource.get({ id: commentId });
         },
-        getAllCategories: function () {
+
+        save: function (comment) {
+            return resource.save(comment);
+        },
+
+        getComments: function () {
             return resource.query();
         },
     };
-});  
+});

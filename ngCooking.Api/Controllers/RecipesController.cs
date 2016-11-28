@@ -85,6 +85,15 @@ namespace ngCooking.Api.Controllers
                 return BadRequest(ModelState);
             }
             recipe.Id = recipe.Name.ToLowerInvariant().Replace(' ', '-');
+            recipe.Community = db.Communities.Where(x => x.Id == recipe.CreatorId).FirstOrDefault();
+            var ingredients = recipe.IngredientList;
+            recipe.IngredientList = new List<Ingredient>();
+            foreach (var item in ingredients)
+            {
+                var i = db.Ingredients.Where(x => x.Id == item.Id).Include(x=>x.Categorie).FirstOrDefault();
+                recipe.IngredientList.Add(i);
+            }
+
             db.Recipes.Add(recipe);
 
             try
@@ -93,6 +102,7 @@ namespace ngCooking.Api.Controllers
             }
             catch (DbUpdateException)
             {
+
                 if (RecipeExists(recipe.Id))
                 {
                     return Conflict();
@@ -101,6 +111,20 @@ namespace ngCooking.Api.Controllers
                 {
                     throw;
                 }
+            }
+            catch (System.Data.Entity.Validation.DbEntityValidationException e)
+            {
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    System.Diagnostics.Debug.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        System.Diagnostics.Debug.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
             }
 
             return CreatedAtRoute("DefaultApi", new { id = recipe.Id }, recipe);

@@ -23,7 +23,7 @@ namespace ngCooking.Api.Models
         [DataMember(Name = "isAvailable")]
         public bool IsAvailable { get; set; }
         [DataMember(Name = "picture")]
-        [DataType(DataType.ImageUrl)]
+        //[DataType(DataType.ImageUrl)]
         public string Picture { get; set; }
         [DataMember(Name = "category")]
 
