@@ -1,9 +1,9 @@
 'use strict'
 
-cookingApp.filter("betweenCalories", function() {
-    return function(data, min, max) {
+cookingApp.filter("betweenCalories", function () {
+    return function (data, min, max) {
         var res = [];
-        angular.forEach(data, function(i) {
+        angular.forEach(data, function (i) {
             if ((i.calories > min && i.calories < max))
                 res.push(i);
         });
@@ -23,6 +23,18 @@ cookingApp.filter("byCategory", function () {
             return res;
         }
         return data;
+    };
+});
+
+cookingApp.filter("byUserId", function () {
+
+    return function (data, userId) {
+        var res = [];
+        angular.forEach(data, function (i) {
+            if (i.creatorId == userId)
+                res.push(i);
+        });
+        return res;
     };
 });
 

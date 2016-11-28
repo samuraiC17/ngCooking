@@ -9,27 +9,27 @@ var cookingApp = angular.module('cookingApp', ['ngSanitize', 'ngResource', 'ngCo
             });
         $routeProvider.when('/communaute',
             {
-                templateUrl: 'template/communaute.html',
+                templateUrl: '/template/communaute.html',
                 controller: 'CommunauteListController'
             });
         $routeProvider.when('/communaute/:communauteId',
             {
-                templateUrl: 'template/communaute_details.html',
+                templateUrl: '/template/communaute_details.html',
                 controller: 'CommunauteController'
             });
         $routeProvider.when('/recettesAdd',
             {
-                templateUrl: 'template/recettes_new.html',
+                templateUrl: '/template/recettes_new.html',
                 controller: 'RecetteAddController'
             });
         $routeProvider.when('/recettes',
             {
-                templateUrl: 'template/recettes.html',
+                templateUrl: '/template/recettes.html',
                 controller: 'RecetteListController'
             });
         $routeProvider.when('/recettes/:recetteId',
             {
-                templateUrl: 'template/recette_details.html',
+                templateUrl: '/template/recettes_details.html',
                 controller: 'RecetteController'
             });
 

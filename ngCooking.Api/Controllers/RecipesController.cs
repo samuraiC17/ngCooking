@@ -28,7 +28,11 @@ namespace ngCooking.Api.Controllers
         [ResponseType(typeof(Recipe))]
         public IHttpActionResult GetRecipe(string id)
         {
-            Recipe recipe = db.Recipes.Find(id);
+            Recipe recipe = db.Recipes
+                .Include(r => r.IngredientList)
+                .Include(r => r.Comments)
+                .Include(x => x.Comments.Select(y => y.Community))
+                .SingleOrDefault(r => r.Id == id);
             if (recipe == null)
             {
                 return NotFound();

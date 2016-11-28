@@ -12,10 +12,13 @@ namespace ngCooking.Api.Models
     [DataContract]
     public class Comment
     {
-        [DataMember(Name ="id")]
+        [DataMember(Name = "id")]
         public int Id { get; set; }
         [DataMember(Name = "userId")]
         public int? UserId { get; set; }
+        [DataMember(Name = "userName")]
+        [NotMapped]
+        public string UserName { get { return Community != null ? String.Format("{0} {1}", Community.FirstName, Community.Surname) : String.Empty; } }
         [DataMember(Name = "title")]
         public string Title { get; set; }
         [DataMember(Name = "comment")]

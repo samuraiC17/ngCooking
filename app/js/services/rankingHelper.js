@@ -14,6 +14,14 @@ cookingApp.factory('rankingHelper', function () {
             for (var i = 0; i < recette.note; i++) {
                 recette.hearts[i] = i;
             }
+        },
+
+        initHearts: function (note) {
+            var hearts = new Array(note);
+            for (var i = 0; i < note; i++) {
+                hearts[i] = i;
+            }
+            return hearts;
         }
     }
     function setDescription(level) {

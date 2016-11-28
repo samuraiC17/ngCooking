@@ -14,6 +14,7 @@ namespace ngCooking.Api.Models
         public Ingredient()
         {
             Recipes = new List<Recipe>();
+            Categorie = new Models.Category();
         }
         [DataMember(Name ="id")]
         public string Id { get; set; }
@@ -25,6 +26,9 @@ namespace ngCooking.Api.Models
         [DataType(DataType.ImageUrl)]
         public string Picture { get; set; }
         [DataMember(Name = "category")]
+
+        //[JsonIgnore]
+        //[IgnoreDataMember]
         public string Category { get { return Categorie.Id; } }
         [DataMember(Name = "calories")]
         [Range(1, 1000)]

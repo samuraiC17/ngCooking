@@ -18,7 +18,7 @@ namespace ngCooking.Api.Models
         }
 
         [System.ComponentModel.DataAnnotations.Key]
-        [DataMember(Name ="id")]
+        [DataMember(Name = "id")]
         public string Id { get; set; }
         [DataMember(Name = "name")]
         public string Name { get; set; }
@@ -37,12 +37,17 @@ namespace ngCooking.Api.Models
         [DataMember(Name = "preparation")]
         public string Preparation { get; set; }
 
+        [DataMember(Name = "countComment")]
+        [NotMapped]
+        public int CountComment { get { return Comments.Count; } }
+
         [DataMember(Name = "ingredients")]
         [NotMapped]
-        public ICollection<string> Ingredients { get { return IngredientList.Select(x => x.Name).ToList(); } }
+        public ICollection<string> IngredientsNames { get { return IngredientList.Select(x => x.Name).ToList(); } }
 
-        [JsonIgnore]
-        [IgnoreDataMember]
+        //[JsonIgnore]
+        //[IgnoreDataMember]
+        [DataMember(Name = "ingredientsList")]
         public virtual ICollection<Ingredient> IngredientList { get; set; }
         [DataMember(Name = "comments")]
         public virtual ICollection<Comment> Comments { get; set; }
@@ -50,6 +55,5 @@ namespace ngCooking.Api.Models
         [JsonIgnore]
         [IgnoreDataMember]
         public virtual Community Community { get; set; }
-
     }
 }
