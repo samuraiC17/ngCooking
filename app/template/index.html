@@ -31,7 +31,6 @@
 </head>
 
 <body>
-
     <div id="wrapper">
         <header id="header">
             <div class="container">
@@ -76,7 +75,7 @@
                             <div class="account-area">
                                 <button type="button" class="button connect" data-popin-open="connect_popin"><span class="icon"></span>Connexion</button>
                                 <a href="#" ng-click="detailsCommunaute()" class="button account"><span class="icon"></span>Mon profil</a>
-                                <button type="button" class="button deconnect"><span class="glyphicon glyphicon-off"></span>Deconnexion</button>
+                                <button type="button" class="button deconnect"><span class="glyphicon glyphicon-off" ng-show="userId!=0"></span>Deconnexion</button>
                             </div>
                         </nav>
                     </div>
@@ -105,7 +104,7 @@
     </div>
 
     <div class="popin" data-popin="connect_popin">
-        <div class="popin-content">
+        <div class="popin-content" ng-hide='userId==0'>
             <div class="popin-scroll">
                 <p class="popin-title">Connexion</p>
                 <form action="#">

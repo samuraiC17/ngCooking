@@ -116,5 +116,16 @@ namespace ngCooking.Api.Controllers
         {
             return db.Communities.Count(e => e.Id == id) > 0;
         }
+
+        [ResponseType(typeof(Int32))]
+        public int AuthCommunity(string email, string password)
+        {
+            var user = db.Communities.Where(x => x.Email == email).FirstOrDefault();
+
+            if (user != null)
+                if (user.Password == password)
+                    return user.Id;
+            return 0;
+        }
     }
 }

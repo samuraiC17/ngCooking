@@ -1,4 +1,4 @@
-cookingApp.factory('communauteData', function($resource,CONFIG) {
+cookingApp.factory('communauteData', function($resource, CONFIG, $http) {
     var resource = $resource(CONFIG['END_POINT'] + 'communities/:id', { id: '@id' },
         { "getAll": { method: "GET", isArray: true } });
     return {
@@ -7,6 +7,12 @@ cookingApp.factory('communauteData', function($resource,CONFIG) {
         },
         getAllCommunaute: function() {
             return resource.query();
+        },
+        getAuth: function(email, password) {
+            return $http({
+                method: 'POST',
+                url: CONFIG['END_POINT'] + 'communities?email=' + email + '&password=' + password
+            });
         },
     };
 });  
