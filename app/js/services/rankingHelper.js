@@ -14,13 +14,21 @@ cookingApp.factory('rankingHelper', function () {
             for (var i = 0; i < recette.note; i++) {
                 recette.hearts[i] = i;
             }
+        },
+
+        initHearts: function (note) {
+            var hearts = new Array(note);
+            for (var i = 0; i < note; i++) {
+                hearts[i] = i;
+            }
+            return hearts;
         }
     }
     function setDescription(level) {
         if (level === 1)
-            return 'Beginner';
+            return 'Novice';
         if (level === 2)
-            return 'Intermediate';
+            return 'Confirmé';
         if (level === 3)
             return 'Expert';
     };

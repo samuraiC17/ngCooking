@@ -50,6 +50,7 @@
 			<div class="recettes row">
 
 				<p ng-show="filteredItems==0" class=" col-xs-12 blank">Aucune recette ne correspond à votre recherche</p>
+				{{recettes[0]}}
 				<div class="recettes row">
 					<div class="col-xs-6 col-sm-3 recette" ng-init="initRecette(recette)" ng-repeat="recette in recettes
 						| searchFor:nameFilter 

@@ -38,18 +38,18 @@
 						<label for="">Sélectionnez tous les ingrédients de votre recette</label>
 					</p>
 					<p class="ac">
-						<select ng-model="categorie">
+						<select ng-model="ingCategorie">
 												<option ng-repeat="cat in categories  | orderBy:'id'" value="{{cat.id}}">{{cat.nameToDisplay}}</option>
 											</select>
 						<span class="span-label"><span class="glyphicon glyphicon-menu-right nm"></span></span>
 						<select ng-model="ingredient">
-							<option ng-repeat="ing in ingredients | filter:{category:categorie} | orderBy:'name'" value="{{ing.id}}">{{ing.name}}</option>
+							<option ng-repeat="ing in ingredients | filter:{category:ingCategorie} | orderBy:'name'" value="{{ing.id}}">{{ing.name}}</option>
 											</select>
 						<button type="button" ng-click="addIng(ingredient)" class="btn btn_color3"><span class="glyphicon glyphicon-plus"></span></button>
 					</p>
 					<div class="ingredients_list">
 						<ul class="list ac">
-							<li class="item" ng-repeat="ing in recipe.ingredients">
+							<li class="item" ng-repeat="ing in recipe.ingredientsList">
 								<img class="item-img" src="img/ingredients/{{ing.picture}}" alt="{{ing.name}}">
 								<p class="item-name" title="{{ing.name}}">{{ing.name}}</p>
 								<button type="button" class="remove_ingredient" ng-click="removeIng(ing.id)"><span class="glyphicon glyphicon-remove"></span></button>
@@ -76,7 +76,7 @@
 						<span>Votre recette a bien été ajoutée !</span>
 					</p>
 					<p class="ac">
-						<a class="btn btn_color1" href="communaute_details.html"><span class="glyphicon glyphicon-cutlery"></span><span>Mes recettes</span></a>
+						<a class="btn btn_color1" href="/communaute/1"><span class="glyphicon glyphicon-cutlery"></span><span>Mes recettes</span></a>
 					</p>
 				</div>
 

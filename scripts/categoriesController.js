@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 module.exports.get = function(req, res) {
-    var categorie = fs.readFileSync('app/json/categories/' + req.params.id + '.json', 'utf8');
+    var categorie = fs.readFileSync(this.endpoint + 'categories/' + req.params.id + '.json', 'utf8');
     res.setHeader('Content-Type', 'application/json');
     res.send(categorie);
 };
