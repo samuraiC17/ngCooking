@@ -1,0 +1,21 @@
+{
+  "name": "f2e99585a8d6ac74",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "angular-mocks": "^1.6.0",
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "jasmine-core": "^2.5.2",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-teamcity-reporter": "^1.0.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.0"
+  }
+}

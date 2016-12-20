@@ -22,6 +22,13 @@ cookingApp.factory('rankingHelper', function () {
                 hearts[i] = i;
             }
             return hearts;
+        },
+		
+		setDescription: function (level) {
+            return setDescription(level);
+        },
+		setName: function (firstname,surname) {
+            return setName(firstname, surname)
         }
     }
     function setDescription(level) {
